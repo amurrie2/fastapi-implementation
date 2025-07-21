@@ -22,4 +22,4 @@ def read_item(item_id: int, q: Union[str, None] = None):
 # PUT endpoint that updates an item with JSON data
 @app.put("/items/{item_id}")
 def update_item(item_id: int, item: Item):
-    return {"item_name": item.name, "item_id": item_id}
+    return {"item_id": item.id, "name": item.name}
